@@ -1,15 +1,13 @@
 # Tugas 5 - Screenshot Todo App
 
 ## 1. Todo Create 
-![Alt text](screenshot/tugas5/Cuplikan layar 2025-04-25 191455.png) 
+![alt text](screenshot/tugas5/Todo_Create.png) 
 
 ## 2. Todo Created
-![Alt text](screenshot/tugas5/Cuplikan layar 2025-04-25 191527.png)
-![Alt text](screenshot/tugas5/Cuplikan layar 2025-04-25 191546.png)
-![Alt text](screenshot/tugas5/Cuplikan layar 2025-04-25 191559.png)
+![alt text](screenshot/tugas5/Todo_Created.png) 
 
 ## 3. User Search
-![Alt text](screenshot/tugas5/Cuplikan layar 2025-04-25 191620.png) 
+![alt text](screenshot/tugas5/User_search.png) 
 
 ## 4. User Search Result
-![Alt text](screenshot/tugas5/Cuplikan layar 2025-04-25 191813.png) 
+![alt text](screenshot/tugas5/user_search_result.png)

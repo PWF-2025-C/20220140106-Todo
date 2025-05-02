@@ -21,8 +21,8 @@
 ![alt text](screenshot/tugas6/User_Make_Admin.png)
 
 ## 7. User Remove Admin
-![alt text](screenshot/tugas6/User_Remove_Admin.png)
+![alt text](screenshot/tugas6/gmbar_user_remove.png)
 
 ## 8. User Deleted
-![alt text](screenshot/tugas6/User_Deleted.png)
+![alt text](screenshot/tugas6/gmbar_del_us.png)
 ![alt text](screenshot/tugas6/User_Deleted2.png)

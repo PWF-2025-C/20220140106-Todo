@@ -66,7 +66,7 @@
                                     <td class="px-6 py-4">
                                         <div class="flex flex-wrap gap-4">
                                             @if ($data->is_done == false)
-                                                <form action="{{ route('todo.complete', $data) }}" method="Post" class="inline-block">
+                                                <form action="{{ route('todo.complete', $data) }}" method="POST" class="inline-block">
                                                     @csrf
                                                     @method('PATCH')
                                                     <button type="submit" class="text-green-600 dark:text-green-400">
@@ -74,7 +74,7 @@
                                                     </button>
                                                 </form>
                                             @else
-                                                <form action="{{ route('todo.uncomplete', $data) }}" method="Post" class="inline-block">
+                                                <form action="{{ route('todo.uncomplete', $data) }}" method="POST" class="inline-block">
                                                     @csrf
                                                     @method('PATCH')
                                                     <button type="submit" class="text-blue-600 dark:text-blue-400">

@@ -7,7 +7,7 @@
 ![alt text](screenshot/tugas6/tdo_uncompleted.png) 
 
 ## 3. Todo Edited
-![alt text](screenshot/tugas6/tdo_edited.png) 
+![alt text](screenshot/tugas6/tdo_edited.png)
 ![alt text](screenshot/tugas6/tdo_edited2.png) 
 
 ## 4. Todo Deleted

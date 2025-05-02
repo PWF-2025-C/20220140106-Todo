@@ -29,5 +29,22 @@ Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
 Route::resource('todo', TodoController::class)->except(['show']);
 
-require __DIR__.'/auth.php';
+Route::patch('/todo/{todo}/complete', [TodoController::class, 'complete'])->name('todo.complete');
 
+Route::patch('/todo/{todo}/incomplete', [TodoController::class, 'uncomplete' ])->name('todo.uncomplete');
+
+Route::patch('/user/{user}/makeadmin', [UserController::class, 'makeadmin'])->name('user.makeadmin');
+
+Route::patch('/user/{user}/removeadmin', [UserController::class, 'removeadmin'])->name('user.removeadmin');
+
+Route::get('/todo/{todo}/edit', [TodoController::class, 'edit'])->name('todo.edit');
+
+Route::patch('/todo/{todo}', [TodoController::class, 'update'])->name('todo.update');
+
+Route::delete('/todo/{todo}', [TodoController::class, 'destroy'])->name('todo.destroy');
+
+Route::delete('/todo', [TodoController::class, 'destroyCompleted'])->name('todo.deleteallcompleted');
+
+Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
+
+require __DIR__.'/auth.php';

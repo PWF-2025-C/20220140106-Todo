@@ -17,6 +17,47 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     
+                    <!-- Search and Alert Combined -->
+                    <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
+                        @if (request('search'))
+                            <h2 class="pb-3 text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
+                                Search result for: {{ request('search') }}
+                            </h2>
+                        @endif
+
+                        <div class="flex items-center justify-between gap-4 flex-wrap">
+                            <form class="flex items-center gap-2">
+                                <div>
+                                    <x-text-input id="search" name="search" type="text" class="w-50" 
+                                        placeholder="Search by name or email" value="{{ request('search') }}" autofocus />
+                                </div>
+                                <div class="px-6">
+                                    <x-primary-button type="submit">
+                                        {{ __("Search") }}
+                                    </x-primary-button>
+                                </div>
+                            </form>
+
+                            <div>
+                                @if (session("success"))
+                                    <p x-data="{ show: true }" x-show="show" x-transition 
+                                        x-init="setTimeout(() => show = false, 5000)"
+                                        class="text-sm text-green-600 dark:text-green-400">
+                                        {{ session('success') }}
+                                    </p>
+                                @endif
+                                @if (session("danger"))
+                                    <p x-data="{ show: true }" x-show="show" x-transition 
+                                        x-init="setTimeout(() => show = false, 5000)"
+                                        class="text-sm text-red-600 dark:text-red-400">
+                                        {{ session('danger') }}
+                                    </p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Search and Alert -->
+
                     <!-- User Table -->
                     <div class="relative overflow-x-auto">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -54,7 +95,37 @@
                                             </p>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <!-- Action buttons would go here -->
+                                            <div class="flex gap-4 flex-wrap">
+                                                @if ($data->is_admin)
+                                                    <form action="{{ route('user.removeadmin', $data) }}" method="POST" class="inline-block">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <button type="submit"
+                                                            class="text-blue-600 dark:text-blue-400 whitespace-nowrap">
+                                                            Remove Admin
+                                                        </button>
+                                                    </form>
+                                                @else
+                                                    <form action="{{ route('user.makeadmin', $data) }}" method="POST" class="inline-block">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <button type="submit"
+                                                            class="text-blue-600 dark:text-blue-400 whitespace-nowrap">
+                                                            Make Admin
+                                                        </button>
+                                                    </form>
+                                                @endif
+
+                                                <form action="{{ route('user.destroy', $data) }}" method="POST" class="inline-block">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit"
+                                                        class="text-red-600 dark:text-red-400 whitespace-nowrap"
+                                                        onclick="return confirm('Are you sure you want to delete this user?');">
+                                                        Delete
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @empty
@@ -70,7 +141,7 @@
                     <!-- End User Table -->
 
                     <div class="px-6 py-5">
-                    {{ $users->links() }}
+                        {{ $users->links() }}
                     </div>
                 </div>
             </div>

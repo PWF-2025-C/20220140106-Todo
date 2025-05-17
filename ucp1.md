@@ -8,6 +8,6 @@
 
 ![alt text](screenshot/ucp1/category.png)
 
-## 2. Browser User
+## 3. Browser User
 
 ![alt text](screenshot/ucp1/user.png)

@@ -17,12 +17,12 @@ class TodoController extends Controller
         //     ->get();
 
         $todos = Todo::with('category') // <-- eager load
-            ->where('user_id', auth()->user()->id)
+            ->where('user_id', Auth::id())
             ->orderBy('is_done', 'asc')
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate(10);
 
-        $todosCompleted = Todo::where('user_id', Auth::user()->id)
+        $todosCompleted = Todo::where('user_id', Auth::id())
             ->where('is_done', true)
             ->count();
 

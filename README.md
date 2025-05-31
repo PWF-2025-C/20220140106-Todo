@@ -47,9 +47,10 @@ a. Menampilkan semua data todo
 b. Menampilkan berdasarkan berdasarkan id
 ![image](https://github.com/user-attachments/assets/17b9198c-dbb7-4aa3-ab7b-25bce91894d2)
 
+Tugas 11 API – Laravel Sanctum – Auth, Read, Search Data, JWT dan Dokumentasi API
+![Cuplikan layar 2025-05-31 155131](https://github.com/user-attachments/assets/47027067-138f-401f-ade5-4a0bc6f42afb)
+![image](https://github.com/user-attachments/assets/295c7ed3-0e47-4818-8c00-ade3c8595494)
+![Cuplikan layar 2025-05-31 160401](https://github.com/user-attachments/assets/72e9d694-3b18-4499-ac17-dfa8d24d5d15)
 
 
 
-
-
->>>>>>> 373d12204bbb7a9ca1bb96cfaa1b733889e79577

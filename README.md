@@ -50,6 +50,7 @@ b. Menampilkan berdasarkan berdasarkan id
 Tugas 11 API – Laravel Sanctum – Auth, Read, Search Data, JWT dan Dokumentasi API
 ![Cuplikan layar 2025-05-31 155131](https://github.com/user-attachments/assets/47027067-138f-401f-ade5-4a0bc6f42afb)
 ![image](https://github.com/user-attachments/assets/295c7ed3-0e47-4818-8c00-ade3c8595494)
+![Cuplikan layar 2025-05-31 160401](https://github.com/user-attachments/assets/72e9d694-3b18-4499-ac17-dfa8d24d5d15)
 
 
 

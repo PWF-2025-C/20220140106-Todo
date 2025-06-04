@@ -4,10 +4,10 @@
 
 ![alt text](screenshot/tugas11/overview.png)
 
-## 2. Halaman Utama Tst Request
+## 2. Login Admin
 
-![alt text](screenshot/tugas11/TampilanUtama.png)
+![alt text](screenshot/tugas11/loginadmin.png)
 
-## 3. Melakukan Test Request
+## 2. Login User
 
-![alt text](screenshot/tugas11/TestRequest.png)
+![alt text](screenshot/tugas11/loginuser.png)

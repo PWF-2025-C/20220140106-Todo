@@ -108,4 +108,18 @@ return [
     ],
 
     'extensions' => [],
+
+    'auth' => [
+        'jwt' => [
+            'type' => 'http',
+            'scheme' => 'bearer',
+            'bearerFormat' => 'JWT',
+            'in' => 'header',
+        ],
+    ],
+
+    'default_security' => [
+        ['jwt' => []],
+    ],
+
 ];
